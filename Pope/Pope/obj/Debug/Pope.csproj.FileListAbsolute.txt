@@ -1,0 +1,6 @@
+V:\Desktop\Fall 2015\IST237\Pope\Pope\bin\Pope.dll.config
+V:\Desktop\Fall 2015\IST237\Pope\Pope\bin\Pope.dll
+V:\Desktop\Fall 2015\IST237\Pope\Pope\bin\Pope.pdb
+V:\Desktop\Fall 2015\IST237\Pope\Pope\obj\Debug\Pope.csprojResolveAssemblyReference.cache
+V:\Desktop\Fall 2015\IST237\Pope\Pope\obj\Debug\Pope.dll
+V:\Desktop\Fall 2015\IST237\Pope\Pope\obj\Debug\Pope.pdb
