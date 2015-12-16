@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pope App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <link href='https://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="JavaScript1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="cover-container">
+        <!--------------------------------------------------------------------------------------------------------------------------- NAV ---------------------------------------------------------------------------------------------->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!------------------------------------------------------------------------------------------ Brand and toggle get grouped for better mobile display------------------------------------------------------------------- -->
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#Home">
+                        <img alt="Brand" src="Images/Logo.png" style="width:304px;height:328px;">
+                    </a>-->
+                </div>
+                <!------------------------------------------------------------------------------------------------- Collect the nav links, forms, and other content for toggling ------------------------------------------------->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                       
+                        <li><a id="navHome"><big> Home</big> <span class="sr-only">(current)</span></a></li>
+                        <li><a id="navMission"><big>Mission</big></a></li>
+                        <li><a id="navAbout"><big>About</big></a></li>
+                        <li><a id="navContact"><big>Contact</big></a></li>
+                        <li><a id="navPopular"><big>Popular</big></a></li>
+
+                    </ul>
+
+                    <!---------------------------------------------------------------------------------------------------------Login and signup buttons------------------------------------------------------------>
+                    <button type="button" class="btn btn-default navbar-btn btn pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Log in</button>
+                    <button type="button" class="btn btn-default navbar-btn btn pull-right" data-toggle="modal" data-target="#myModalRegister"> <span class="glyphicon glyphicon-user"></span> Sign up</button>
+                    <!----------------------------------------------------------------------------------------------------------------- Login modal------------------------------------------------------------------->
+
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-md">
+
+                            <!----------------------------------------------------------------------------------------------------- Login modal content----------------------------------------------------------->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Log In</h4>
+                                </div>
+                                <div class="modal-body" data-ng-app>
+                                    <form role="form" data-ng-submit="submit()" data-ng-controller="login">
+                                        <div class="form-group">
+                                            <label for="email">Email address:</label>
+                                            <input type="email" class="form-control" id="email" data-ng-model="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd">Password:</label>
+                                            <input type="password" class="form-control" id="pwd" data-ng-model="Password">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox"> Remember me</label>
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <button type="submit" class="btn btn-primary" id="LoginSubmit">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!------------------------------------------------------------------------------------------------------------Register modal-------------------------------------------------------------->
+                            <div id="myModalRegister" class="modal fade" role="dialog" data-ng-app>
+                        <div class="modal-dialog modal-lg">
+
+                            <!---------------------------------------------------------------------------------------------------Register modal content--------------------------------------------------------------->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel">Register</h4>
+                                </div>
+                                <div class="modal-body">
+								 
+								  <iframe src="https://docs.google.com/forms/d/1XLQ-5qUt2N2HXfhOQ1x7pAFfFzI4LzP-0dJiy-iJrZ4/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+								  
+                               <!----        <form role="form" data-ng-submit="submit()" data-ng-controller="Ctrl">
+                                        <div class="form-group">
+                                            <label for="FirstName">First Name: </label>
+                                            <input type="text" class="form-control" id="CreateFirstName" data-ng-model="FirstName" placeholder="First Name" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="LastName">Last Name: </label>
+                                            <input type="text" class="form-control" id="CreateLastName" data-ng-model="LastName" placeholder="Last Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="createEmail">Email address:</label>
+                                            <input type="email" class="form-control" id="createEmail" data-ng-model="Email" placeholder="Email" required>
+                                        </div>
+                                        <div class="form-group" id="createPasswordDiv">
+                                            <label for="createPassword">Password:</label>
+                                            <input type="password" class="form-control" id="createPassword" data-ng-model="Password" placeholder="Password" required>
+                                        </div>
+
+                                     --------------------------------------------------------------------------JavaScript PASSWORD CHECK------------------------------------------------------
+                                        <div class="form-group" id="checkPasswordDiv">
+                                            <label for="checkPassword">Confirm Password:</label>
+                                            <input type="password" class="form-control" id="checkPassword" onblur="checkPassword2Function()" placeholder="Check Password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- --------------------------------------------------------Javascript Make sure only numbers / phone numbers are inserted check-----------------------
+                                            <label for="createPhone">Phone Number:</label>
+                                            <input type="text" class="form-control" id="createPhone" data-ng-model="Phone" placeholder="Phone" required>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label><input type="checkbox">Agree to Terms and Conditions</label>
+                                        </div>
+                                        <div class="modal-footer">
+
+                                            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+
+                                    </form----->
+                                </div>
+
+                            </div> 
+                        </div>
+
+
+                        <!-- optional search bar-->
+                        <!--<form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+
+
+            </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </div>
+        </nav>
+        <!--------------------------------------------------------------------------------------------------------------------Pope Jumbotron----------------------------------------------------->
+        <!--<div class="jumbotron" id="Home">
+            <div class="container fill">
+                <h1>Pope is here</h1>
+                <p>Pope Marketplace</p>
+                <p><a class="btn btn-primary btn-lg" href="#AboutUs" role="button">About Us</a></p>
+            </div>
+        </div>-->
+        <div class="container-fluid full bg myText" id="home">
+            <div class="home myText">
+                <h1> <span class="span1">Pope Marketplace</span></h1>
+                <button class="btnLive" id="btnLive"> About US </button>
+            </div>
+        </div>
+
+        <!---------------------------------------------------------------------------------------------------------------------About Us---------------------------------------------------------------------------->
+        <!--<div class="jumbotron" id="AboutUs">
+            <div class="container fill">
+                <h1>Our Story</h1>
+
+                <p>It all started in a digital entrepreneurship class at Penn State Abington.
+                A group of local Philadelphia IT students with the guidance of their professor decided they wanted give people an easier way to enjoy media about the Pope.
+                 We set out to create a modern photo-sharing web service that would
+                allow anyone to share their personal media about the Pope
+                 and have the option to sell this media to others via a digital marketplace.
+                 We believe this service is going to change not only how people perceive the Pope
+                 but also how they promote and interact with Him. Our goal is to make the world
+                 a better place one Pope photo at a time.
+                </p>
+            </div>
+        </div>-->
+
+        <div id="Mission">
+            <div class="container-fluid full2 mission bg">
+                <div class="home myText">
+                    <h1><span class="span1">Our Mission</span></h1>
+                    <div>
+                        <br /><br />
+                        It all started in a digital entrepreneurship class at Penn State Abington.
+                        A group of local Philadelphia IT students with the guidance of their professor decided they wanted give people an easier way to enjoy media about the Pope.
+                        We set out to create a modern photo-sharing web service that would
+                        allow anyone to share their personal media about the Pope
+                        and have the option to sell this media to others via a digital marketplace.
+                        We believe this service is going to change not only how people perceive the Pope
+                        but also how they promote and interact with Him. Our goal is to make the world
+                        a better place one Pope photo at a time.
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <div class="midmid">
+                <h1 class="colh1"> Things we focus on</h1>
+                <div class="myCol3">
+
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Curabitur sodales ligula in libero.
+                    Sed dignissim lacinia nunc. Curabitur tortor.
+                    Pellentesque nibh
+                </div>
+                <div class="myCol3">
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Curabitur sodales ligula in libero.
+                    Sed dignissim lacinia nunc. Curabitur tortor.
+                    Pellentesque nibh
+                </div>
+                <div class="myCol3">
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Curabitur sodales ligula in libero.
+                    Sed dignissim lacinia nunc. Curabitur tortor.
+                    Pellentesque nibh
+                </div>
+            </div>
+        </div>
+        <!--ABOUT PART-->
+        <div id="About">
+            <div class="container-fluid full2 about bg">
+                <div class="home myText">
+                    <h1><span class="span1">About</span></h1>
+                    <div>
+                        <br /><br />
+                        Lear more about us
+                    </div>
+
+
+
+                </div>
+            </div>
+           
+            <div class="midmid">
+                <h1 class="colh1"> Meet the team</h1>
+                <div class="myCol3">
+
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Curabitur sodales ligula in libero.
+                    Sed dignissim lacinia nunc. Curabitur tortor.
+                    Pellentesque nibh
+                </div>
+                <div class="myCol3">
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Curabitur sodales ligula in libero.
+                    Sed dignissim lacinia nunc. Curabitur tortor.
+                    Pellentesque nibh
+                </div>
+                <div class="myCol3">
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Curabitur sodales ligula in libero.
+                    Sed dignissim lacinia nunc. Curabitur tortor.
+                    Pellentesque nibh
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------------------------------------------------------------------------- Sell------------------------------------------------------------------------>
+        <div class="container text-center" id="Popular">
+            <h1><span class="span1">Most popular items</span></h1>
+            <div class="row" style="background-color:#f6f6f6;">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color:#f6f6f6;">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color:#f6f6f6;">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="Images/shirt.jpg" alt="...">
+                        <div class="caption">
+                            <h2>Item</h2>
+                            <h3>Price</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------------------------------------------Contact us ------------------------------------------------------->
+        <div id="Contact">
+            <div class="container-fluid full2 contact bg" >
+                <div class="home bg myText">
+                    <h1><span class="span1">Contact Us</span></h1>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                        </div>
+						<iframe src="https://docs.google.com/forms/d/1qMnkLLAmGxTL03c-MU_Lj_7xNeTNUtelhYH5YoeNnqA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                    <form role="form" action="" method="post">
+                              <!--   <div class="col-lg-6">
+
+                                <div class="form-group">
+                                    <label for="InputName">Your Name</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name">
+                                        <span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputEmail">Your Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email">
+                                        <span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="InputMessage">Message</label>
+                                    <div class="input-group">
+                                        <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5"></textarea>
+                                        <span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+
+                                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-left ">
+                            </div> -->
+                        </form>
+                        <hr class="featurette-divider hidden-lg">
+                        <div class="col-lg-5 col-md-push-1">
+                            <address>
+                                <h3>Office Location</h3>
+                                <p class="lead">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1525.5866763614843!2d-75.11085683459883!3d40.116140090886645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b055aa880c67%3A0xdddc30c9cdaf01d7!2sPenn+State+Abington!5e0!3m2!1sen!2sus!4v1425259319589" width="400" height="300" frameborder="0" style="border:0"></iframe>
+                                    <a style="color:white;" href="https://www.google.com/maps/place/1600+Woodland+Rd,+Abington,+PA+19001/@40.1171713,-75.110561,17z/data=!3m1!4b1!4m2!3m1!1s0x89c6b18d28e46fa9:0xc9852141db895f05">
+                                       <br /> 1600 Woodland Rd.<br>
+                                        Abington, PA 19001
+                                    </a><br>
+
+
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--------------------------------------------------------------- Footer---------------------------------------------------->
+            <div class="footer container-fluid">
+                <div class="leftFoot">
+                    Copyright<br />
+                    Terms and Agreements
+                </div>
+
+                <div class="midFoot">
+                    Contact Us
+                </div>
+
+                <div class="rightFoot">
+                    Follow Us
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    $("#navHome").click(function (event) {
+                        $("#home").attr("style", "display:Block");
+                        $("#Contact").attr("style", "display:Block");
+                        $("#About").attr("style", "display:Block");
+                        $("#Mission").attr("style", "display:Block");
+                        $("#Popular").attr("style", "display:Block");
+                    });
+                    $("#navContact").click(function (event) {
+                        $("#home").attr("style", "display:none;");
+                        $("#Contact").attr("style", "display:block");
+                        $("#About").attr("style", "display:none");
+                        $("#Mission").attr("style", "display:none");
+                        $("#Popular").attr("style", "display:none");
+                    });
+                    $("#navAbout").click(function (event) {
+                        $("#home").attr("style", "display:none");
+                        $("#Contact").attr("style", "display:none");
+                        $("#About").attr("style", "display:Block");
+                        $("#Mission").attr("style", "display:none");
+                        $("#missionMid").attr("style", "display:none");
+                        $("#Popular").attr("style", "display:none");
+                    });
+                    $("#navMission").click(function (event) {
+                        $("#home").attr("style", "display:none");
+                        $("#Contact").attr("style", "display:none");
+                        $("#About").attr("style", "display:none");
+                        $("#Mission").attr("style", "display:block");
+                        $("#Popular").attr("style", "display:none");
+                    });
+                    $("#btnLive").click(function (event) {
+                        $("#home").attr("style", "display:none");
+                        $("#Contact").attr("style", "display:none");
+                        $("#About").attr("style", "display:none");
+                        $("#Mission").attr("style", "display:block");
+                        $("#Popular").attr("style", "display:none");
+                    });
+                    $("#navPopular").click(function (event) {
+                        $("#home").attr("style", "display:none");
+                        $("#Contact").attr("style", "display:none");
+                        $("#About").attr("style", "display:none");
+                        $("#Mission").attr("style", "display:none");
+                        $("#Popular").attr("style", "display:block");
+                    });
+
+
+
+                    // ease in on click
+                    $(document).ready(function () {
+                        $("#home").hide().fadeIn(700);
+                    });
+                    $("#navHome").click(function () {
+                        $("#home").hide().fadeIn();
+                    });
+                    $("#navMission").click(function () {
+                        $("#Mission").hide().fadeIn();
+                    });
+                    $("#navAbout").click(function () {
+                        $("#About").hide().fadeIn();
+                    });
+                    $("#navContact").click(function () {
+                        $("#Contact").hide().fadeIn();
+                    });
+                    $("#navPopular").click(function () {
+                        $("#Popular").hide().fadeIn();
+                    });
+
+                });
+
+            </script>
+
+</body>
+</html>
