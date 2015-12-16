@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+   <!--------﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Pope App</title>
@@ -17,10 +17,10 @@
 </head>
 <body>
     <div class="cover-container">
-    <!--------------------------------------------------------------------------------------------------------------------------- NAV ---------------------------------------------------------------------------------------------->
+    --------------------------------------------------------------------------------------------------------------------------- NAV ---------------------------------------------------------------------------------------------
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <!------------------------------------------------------------------------------------------ Brand and toggle get grouped for better mobile display------------------------------------------------------------------- -->
+        ------------------------------------------------------------------------------------------ Brand and toggle get grouped for better mobile display------------------------------------------------------------------ --
             <div class="navbar-header">
                 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -33,7 +33,7 @@
                     <img alt="Brand" src="Images/Logo.png" style="width:304px;height:328px;">
                 </a>-->
             </div>
-            <!------------------------------------------------------------------------------------------------- Collect the nav links, forms, and other content for toggling ------------------------------------------------->
+           ------------------------------------------------------------------------------------------------- Collect the nav links, forms, and other content for toggling -------------------------------------------------
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"> <span class="glyphicon glyphicon-home"></span><big> Home</big> <span class="sr-only">(current)</span></a></li>
@@ -52,15 +52,15 @@
 
                 </ul>
                 
-                <!---------------------------------------------------------------------------------------------------------Login and signup buttons------------------------------------------------------------>
+            ---------------------------------------------------------------------------------------------------------Login and signup buttons------------------------------------------------------------
                 <button type="button" class="btn btn-default navbar-btn btn pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Log in</button>
                 <button type="button" class="btn btn-default navbar-btn btn pull-right" data-toggle="modal" data-target="#myModalRegister"> <span class="glyphicon glyphicon-user"></span> Sign up</button>
-                <!----------------------------------------------------------------------------------------------------------------- Login modal------------------------------------------------------------------->
+                ----------------------------------------------------------------------------------------------------------------- Login modal------------------------------------------------------------------
 
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog modal-md">
 
-                        <!----------------------------------------------------------------------------------------------------- Login modal content----------------------------------------------------------->
+                      -------------------------------------------------------------------------------------------------- Login modal content----------------------------------------------------------
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -90,11 +90,11 @@
 
                     </div>
                 </div>
-                <!------------------------------------------------------------------------------------------------------------Register modal-------------------------------------------------------------->
+                ------------------------------------------------------------------------------------------------------------Register modal-------------------------------------------------------------
                         <div id="myModalRegister" class="modal fade" role="dialog" data-ng-app>
                     <div class="modal-dialog modal-lg">
 
-                        <!---------------------------------------------------------------------------------------------------Register modal content--------------------------------------------------------------->
+                        ---------------------------------------------------------------------------------------------------Register modal content---------------------------------------------------------------
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -120,13 +120,13 @@
                                         <input type="password" class="form-control" id="createPassword" data-ng-model="Password" placeholder="Password" required>
                                     </div>
 
-                                    <!------------------------------------------------------------------------------JavaScript PASSWORD CHECK----------------------------------------------------------->
+                                    ------------------------------------------------------------------------------JavaScript PASSWORD CHECK-----------------------------------------------------------
                                     <div class="form-group" id="checkPasswordDiv">
                                         <label for="checkPassword">Confirm Password:</label>
                                         <input type="password" class="form-control" id="checkPassword" onblur="checkPassword2Function()" placeholder="Check Password" required>
                                     </div>
                                     <div class="form-group">
-                                        <!-- --------------------------------------------------------Javascript Make sure only numbers / phone numbers are inserted check------------------------------->
+                                        --------------------------------------------------------Javascript Make sure only numbers / phone numbers are inserted check-------------------------------
                                         <label for="createPhone">Phone Number:</label>
                                         <input type="text" class="form-control" id="createPhone" data-ng-model="Phone" placeholder="Phone" required>
                                     </div>
@@ -157,8 +157,8 @@
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </div>
-</nav>
-    <!--------------------------------------------------------------------------------------------------------------------Pope Jumbotron----------------------------------------------------->
+</nav
+    --------------------------------------------------------------------------------------------------------------------Pope Jumbotron---------------------------------------------------
     <div class="jumbotron" id="Home">
         <div class="container fill">
             <h1>Pope is here</h1>
@@ -167,7 +167,7 @@
         </div>
     </div>
 
-    <!---------------------------------------------------------------------------------------------------------------------About Us---------------------------------------------------------------------------->
+    -----------------------------------------------------------------------------------------------------About Us-------------------------------------------------------------------------
         <div class="jumbotron" id="AboutUs">
             <div class="container fill">
                 <h1>Our Story</h1>
@@ -184,7 +184,7 @@
             </div>
         </div>
 
-<!----------------------------------------------------------------------------------------------------------------------------- Sell------------------------------------------------------------------------>
+------------------------------------------------------------------------------------------------------------------------- Sell---------------------------------------------------------------------
         <div class="container text-center" id="Popular">
             <h1 class="text-center">Most popular items</h1>
             <div class="row" style="background-color:#f6f6f6;">
@@ -276,7 +276,7 @@
             </div>
         </div>
 
-   <!-----------------------------------------------------------------------Contact us ------------------------------------------------------->     
+  ---------------------------------------------------------------Contact us ---------------------------------------------------
         <div class="jumbotron" id="ContactUS">
             <div class="container">
                 <h1 class="text-center">Contact us</h1>
@@ -330,7 +330,7 @@
                 </div>
             </div>
         </div>
-        <!--------------------------------------------------------------- Footer---------------------------------------------------->
+        --------------------------------------------------------- Footer---------------------------------------------
         <div class="container" style="margin-bottom:30px;">
             <div class="container-fluid pull-left">
                 <button type="button" class="btn btn-default">
@@ -351,3 +351,4 @@
 </div>
 </body>
 </html>
+----------------->
